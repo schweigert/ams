@@ -5,3 +5,10 @@ c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\Caix
 c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.csproj.GenerateResource.Cache
 c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.exe
 c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.pdb
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.exe
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.pdb
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.Form1.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.Properties.Resources.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.csproj.GenerateResource.Cache
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.exe
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.pdb

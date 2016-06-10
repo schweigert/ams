@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using Fleyhe.Network;
+
 namespace CaixaEletronico
 {
     public partial class Form1 : Form
@@ -20,6 +22,10 @@ namespace CaixaEletronico
         {
             string conta = textBox_Conta.Text;
             string senha = textBox_Senha.Text;
+
+            Console.WriteLine("Teste");
+
+            Event.GenerateHash();
         }
     }
 }
