@@ -1,0 +1,7 @@
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.exe
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\bin\Debug\CaixaEletronico.pdb
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.Form1.resources
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.Properties.Resources.resources
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.csproj.GenerateResource.Cache
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.exe
+c:\users\marlon henry\documents\visual studio 2010\Projects\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.pdb
