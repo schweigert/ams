@@ -11,11 +11,15 @@ using Fleyhe.Network;
 
 namespace CaixaEletronico
 {
-    public partial class Form1 : Form
+    public partial class TelaLogin : Form
     {
-        public Form1()
+
+        public static TelaLogin tela;
+
+        public TelaLogin()
         {
             InitializeComponent();
+            tela = this;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,8 +28,17 @@ namespace CaixaEletronico
             string senha = textBox_Senha.Text;
 
             Console.WriteLine("Teste");
+            TelaSelecao tela = new TelaSelecao();
 
-            Event.GenerateHash();
+            Authentication.name = conta;
+            Authentication.password = senha;
+
+            tela.Show();
+            
+            this.Hide();
+
         }
+
+        
     }
 }

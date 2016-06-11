@@ -1,6 +1,6 @@
 ﻿namespace CaixaEletronico
 {
-    partial class Form1
+    partial class TelaLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -78,7 +78,7 @@
             this.textBox_Senha.Size = new System.Drawing.Size(171, 20);
             this.textBox_Senha.TabIndex = 4;
             // 
-            // Form1
+            // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "TelaLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autenticação";
             this.ResumeLayout(false);
             this.PerformLayout();
