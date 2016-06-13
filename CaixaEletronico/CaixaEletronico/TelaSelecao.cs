@@ -26,5 +26,11 @@ namespace CaixaEletronico
             this.Dispose();
             TelaLogin.tela.Show();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            TelaLog log = new TelaLog();
+            log.Show();
+        }
     }
 }

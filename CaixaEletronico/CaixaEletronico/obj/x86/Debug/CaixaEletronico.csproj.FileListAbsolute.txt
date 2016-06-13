@@ -14,3 +14,4 @@ C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletro
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.csprojResolveAssemblyReference.cache
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaLogin.resources
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaSelecao.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaLog.resources
