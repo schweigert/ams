@@ -34,10 +34,8 @@ namespace Fleyhe.Network
                 
                 for (int i = 0; i < args.Length; i++)
                 {
-
                     writer.Write(args[i].ToString().Normalize() + "\n");
                     writer.Flush();
-
                 }
                 
                 this.Event = reader.ReadLine().Normalize();

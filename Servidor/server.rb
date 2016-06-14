@@ -91,6 +91,21 @@ class CriarCliente < MainEvent
 end
 
 
+class ConfirmJuros < MainEvent
+
+	def solve
+		puts "Ok"
+		query = $db.execute "UPDATE Cliente SET scp = scp + scp*juros"
+		EDA::Log.createLog("Juros atualizado")
+		puts "Ok"
+		@event = "ok"
+		@form[0] = "atualizado"
+		puts "Ok"
+	end
+
+end
+
+
 module EDA
 
 	class Funcionario
