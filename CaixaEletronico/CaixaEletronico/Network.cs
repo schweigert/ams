@@ -16,8 +16,8 @@ namespace Fleyhe.Network
         public static string Host = "localhost";
         public static int Port = 3030;
 
-        public string Event;
-        public string[] response;
+        public string Event = "";
+        public string[] response = new string[0];
 
         public Request (string evnt, string[] args)
         {
@@ -26,16 +26,17 @@ namespace Fleyhe.Network
                 StreamWriter writer = new StreamWriter(tcp.GetStream());
                 StreamReader reader = new StreamReader(tcp.GetStream());
 
-                Console.WriteLine("Conexao realizada com Sucesso");
 
-                writer.WriteLine(evnt.Normalize());
-                writer.WriteLine(args.Length.ToString());
-
-                foreach (object arg in args)
+                writer.Write(evnt.Normalize()+"\n");
+                writer.Flush();
+                writer.WriteLine(args.Length+"\n");
+                writer.Flush();
+                foreach (string arg in args)
                 {
-                    writer.WriteLine(arg.ToString().Normalize()+"\n");
+                    writer.Write(arg.Normalize()+"\n");
+                    writer.Flush();
                 }
-
+                
                 this.Event = reader.ReadLine().Normalize();
                 int count = int.Parse(reader.ReadLine());
                 this.response = new String[count];
@@ -43,6 +44,7 @@ namespace Fleyhe.Network
                 {
                     response[i] = reader.ReadLine().Normalize();
                 }
+
             } catch (System.Exception e)
             {
                 Console.WriteLine(e);

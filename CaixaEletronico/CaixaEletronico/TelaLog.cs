@@ -23,10 +23,10 @@ namespace CaixaEletronico
 
             string log = "";
 
-            foreach(string i in req.response)
+            for(int i = 0; i < req.response.Length; i++)
             {
-                Console.WriteLine(i);
-                log += i;
+                Console.WriteLine(req.response[i]);
+                log += req.response[i];
             }
 
             richTextBox1.Text = log;

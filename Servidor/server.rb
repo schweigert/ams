@@ -6,7 +6,7 @@ class Log < MainEvent
 
 	def solve
 		puts "Working"
-		auth = EDA::Funcionario.new @arg[0], @arg[1]
+		auth = EDA::Funcionario.new @args[0], @args[1]
 		if auth.autenticar
 			@event = 'Log'
 			@form = EDA::Log.getLog
@@ -14,6 +14,24 @@ class Log < MainEvent
 		else
 			@event = 'error'
 		end
+		puts "working"
+	end
+
+end
+
+class Log < MainEvent
+
+	def solve
+		puts "Working"
+		auth = EDA::Funcionario.new @args[0], @args[1]
+		if auth.autenticar
+			@event = 'Log'
+			@form = EDA::Log.getLog
+
+		else
+			@event = 'error'
+		end
+		puts "working"
 	end
 
 end
@@ -33,8 +51,8 @@ module EDA
 		end
 
 		def autenticar
-			a = $db.execute "SELECT senha FROM Funcionario WHERE nome = '#{@nome.chomp}'"
-			if a[0]['senha'] == @senha
+			a = $db.execute "SELECT senha FROM Funcionario WHERE nome = '#{@nome.to_s.chomp}'"
+			if a[0]['senha'] == @senha.chomp
 				return true
 			else
 				return false
@@ -48,7 +66,6 @@ module EDA
 			registros = $db.execute "SELECT * FROM Log"
 
 			ret = []
-			puts registros
 			for i in registros
 				ret << "#{i['data']}: #{i['descricao']}"
 			end
