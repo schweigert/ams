@@ -4,8 +4,6 @@ class Log < Fleyhe::Network::Event
 
 	def solve
 		
-
-
 	end
 
 end
@@ -19,8 +17,13 @@ module EDA
 
 		def initialize login, password
 
+			@login = login
+			@password = password
 
+		end
 
+		def autenticar
+			
 		end
 
 	end
