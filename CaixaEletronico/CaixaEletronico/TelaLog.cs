@@ -15,14 +15,20 @@ namespace CaixaEletronico
         public TelaLog()
         {
             InitializeComponent();
-            
-            Request req = new Request("Log", new Object[0]);
+            string[] args = new string[2];
+            args[0] = Authentication.name;
+            args[1] = Authentication.password;
+
+            Request req = new Request("Log", args);
+
             string log = "";
 
-            for (int i = 0; i < req.response.Length; i++)
+            foreach(string i in req.response)
             {
-                log += req.response[i];
+                Console.WriteLine(i);
+                log += i;
             }
+
             richTextBox1.Text = log;
         }
 

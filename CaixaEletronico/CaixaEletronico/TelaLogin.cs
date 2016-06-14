@@ -27,6 +27,7 @@ namespace CaixaEletronico
             string conta = textBox_Conta.Text;
             string senha = textBox_Senha.Text;
 
+            Console.WriteLine("Teste");
             TelaSelecao tela = new TelaSelecao();
 
             Authentication.name = conta;
