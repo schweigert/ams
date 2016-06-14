@@ -43,7 +43,7 @@ namespace CaixaEletronico
             } else
             {
                 MessageBox.Show
-                ("Login e senha incompatíveis");
+                ("Impossível logar");
             }
 
 

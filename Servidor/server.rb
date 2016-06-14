@@ -56,7 +56,36 @@ class CriarCliente < MainEvent
 
 	def solve
 
+		query = $db.execute "SELECT * FROM Cliente WHERE nome = #{@args[0].chomp}"
+		puts query
+		if (query.size > 0)
+			@event = "error"
+			@args[0] = "name"
+			return
+		end
 
+		query = $db.execute "SELECT * FROM Cliente WHERE cc = #{@args[1].chomp}"
+		puts query
+		if (query.size > 0)
+			@event = "error"
+			@args[0] = "cc"
+			return
+		end
+
+		query = $db.execute "SELECT * FROM Cliente WHERE cp = #{@args[2].chomp}"
+		puts query
+		if (query.size > 0)
+			@event = "error"
+			@args[0] = "cp"
+			return
+		end
+
+		query = $db.execute "INSERT INTRO Cliente (nome, cc, cp, senha) VALUES ('#{@args[0].chomp}','#{@args[1].chomp}','#{@args[2].chomp}','#{@args[3].chomp}')"
+		puts query
+
+		@event = "ok"
+
+		EDA::Log.createLog("Usuário #{@args[0].chomp} criado");
 
 	end
 end
@@ -77,7 +106,6 @@ module EDA
 			a = $db.execute "SELECT senha FROM Funcionario WHERE nome = '#{@nome.to_s.chomp}'"
 
 			if a[0]['senha'] == @senha.chomp
-				$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{@nome.chomp } logou')"
 				return true
 
 			else
@@ -98,6 +126,10 @@ module EDA
 
 			return ret
 
+		end
+
+		def self.createLog desc
+			$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{desc}')"
 		end
 	end
 
