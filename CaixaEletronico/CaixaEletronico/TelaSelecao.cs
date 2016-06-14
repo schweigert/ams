@@ -32,5 +32,11 @@ namespace CaixaEletronico
             TelaLog log = new TelaLog();
             log.Show();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            TelaCadastroCliente tcc = new TelaCadastroCliente();
+            tcc.Show();
+        }
     }
 }

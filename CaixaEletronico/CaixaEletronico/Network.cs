@@ -13,7 +13,7 @@ namespace Fleyhe.Network
 
     public class Request {
 
-        public static string Host = "10.20.129.42";
+        public static string Host = "localhost";
         public static int Port = 3030;
 
         public string Event = "";

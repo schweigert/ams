@@ -56,7 +56,7 @@ class CriarCliente < MainEvent
 
 	def solve
 
-		query = $db.execute "SELECT * FROM Cliente WHERE nome = #{@args[0].chomp}"
+		query = $db.execute "SELECT * FROM Cliente WHERE nome = '#{@args[0].chomp}'"
 		puts query
 		if (query.size > 0)
 			@event = "error"
@@ -64,7 +64,7 @@ class CriarCliente < MainEvent
 			return
 		end
 
-		query = $db.execute "SELECT * FROM Cliente WHERE cc = #{@args[1].chomp}"
+		query = $db.execute "SELECT * FROM Cliente WHERE cc = '#{@args[1].chomp}'"
 		puts query
 		if (query.size > 0)
 			@event = "error"
@@ -72,7 +72,7 @@ class CriarCliente < MainEvent
 			return
 		end
 
-		query = $db.execute "SELECT * FROM Cliente WHERE cp = #{@args[2].chomp}"
+		query = $db.execute "SELECT * FROM Cliente WHERE cp = '#{@args[2].chomp}'"
 		puts query
 		if (query.size > 0)
 			@event = "error"
@@ -80,7 +80,7 @@ class CriarCliente < MainEvent
 			return
 		end
 
-		query = $db.execute "INSERT INTRO Cliente (nome, cc, cp, senha) VALUES ('#{@args[0].chomp}','#{@args[1].chomp}','#{@args[2].chomp}','#{@args[3].chomp}')"
+		query = $db.execute "INSERT INTO Cliente (nome, cc, cp, senha) VALUES ('#{@args[0].chomp}','#{@args[1].chomp}','#{@args[2].chomp}','#{@args[3].chomp}')"
 		puts query
 
 		@event = "ok"
