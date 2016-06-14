@@ -15,5 +15,16 @@ namespace CaixaEletronico
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string de = textBox1.Text;
+            string para = textBox2.Text;
+            bool dep = checkBox2.Checked;
+            bool parap = checkBox1.Checked;
+            float valor = 0.0f;
+
+
+        }
     }
 }
