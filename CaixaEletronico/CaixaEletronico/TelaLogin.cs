@@ -27,15 +27,27 @@ namespace CaixaEletronico
             string conta = textBox_Conta.Text;
             string senha = textBox_Senha.Text;
 
-            Console.WriteLine("Teste");
             TelaSelecao tela = new TelaSelecao();
 
             Authentication.name = conta;
             Authentication.password = senha;
 
-            tela.Show();
+            string[] args = new string[2];
+            args[0] = Authentication.name;
+            args[1] = Authentication.password;
+            Request req = new Request("LogarFunc", args);
+            if (req.Event.Normalize() == "ok")
+            {
+                tela.Show();
+                this.Hide();
+            } else
+            {
+                MessageBox.Show
+                ("Login e senha incompatíveis");
+            }
+
+
             
-            this.Hide();
 
         }
 

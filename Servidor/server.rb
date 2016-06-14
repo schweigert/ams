@@ -4,8 +4,14 @@ class MainEvent < Fleyhe::Network::Event; end
 
 class Log < MainEvent
 
+	# Args:
+	#  0 - name
+	#  1 - password
+
+	# Form:
+	#  n - Lines
+
 	def solve
-		puts "Working"
 		auth = EDA::Funcionario.new @args[0], @args[1]
 		if auth.autenticar
 			@event = 'Log'
@@ -14,24 +20,28 @@ class Log < MainEvent
 		else
 			@event = 'error'
 		end
-		puts "working"
 	end
 
 end
 
-class Log < MainEvent
+class LogarFunc < MainEvent
+
+	# Args:
+	#  0 - name
+	#  1 - password
+
+	# Event
+	#  ok - Login sucess
+	#  error - fail on login
 
 	def solve
-		puts "Working"
 		auth = EDA::Funcionario.new @args[0], @args[1]
+		puts @args.to_s
 		if auth.autenticar
-			@event = 'Log'
-			@form = EDA::Log.getLog
-
+			@event = "ok"
 		else
-			@event = 'error'
+			@event = "error"
 		end
-		puts "working"
 	end
 
 end
@@ -52,8 +62,11 @@ module EDA
 
 		def autenticar
 			a = $db.execute "SELECT senha FROM Funcionario WHERE nome = '#{@nome.to_s.chomp}'"
+
 			if a[0]['senha'] == @senha.chomp
+				$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{@nome.chomp } logou')"
 				return true
+
 			else
 				return false
 			end

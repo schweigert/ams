@@ -29,12 +29,15 @@ namespace Fleyhe.Network
 
                 writer.Write(evnt.Normalize()+"\n");
                 writer.Flush();
-                writer.WriteLine(args.Length+"\n");
+                writer.Write(args.Length.ToString()+"\n");
                 writer.Flush();
-                foreach (string arg in args)
+                
+                for (int i = 0; i < args.Length; i++)
                 {
-                    writer.Write(arg.Normalize()+"\n");
+
+                    writer.Write(args[i].ToString().Normalize() + "\n");
                     writer.Flush();
+
                 }
                 
                 this.Event = reader.ReadLine().Normalize();

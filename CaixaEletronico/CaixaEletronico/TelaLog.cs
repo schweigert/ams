@@ -26,7 +26,7 @@ namespace CaixaEletronico
             for(int i = 0; i < req.response.Length; i++)
             {
                 Console.WriteLine(req.response[i]);
-                log += req.response[i];
+                log += req.response[i] + "\r\n";
             }
 
             richTextBox1.Text = log;
