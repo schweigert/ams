@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication.cs" />
+    <Compile Include="TelaCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastroCliente.Designer.cs">
+      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaLog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="TelaSelecao.Designer.cs">
       <DependentUpon>TelaSelecao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TelaCadastroCliente.resx">
+      <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaLog.resx">
       <DependentUpon>TelaLog.cs</DependentUpon>
     </EmbeddedResource>

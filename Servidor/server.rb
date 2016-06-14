@@ -46,7 +46,20 @@ class LogarFunc < MainEvent
 
 end
 
+class CriarCliente < MainEvent
 
+	# Args:
+	# 0 - name
+	# 1 - cc
+	# 2 - cp
+	# 3 - password
+
+	def solve
+
+
+
+	end
+end
 
 
 module EDA
