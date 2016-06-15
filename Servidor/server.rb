@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 require 'Fleyhe' 	#gem install Fleyhe
 
+# Feito com amor por Marlon henry
+
 class MainEvent < Fleyhe::Network::Event; end
 
 class Log < MainEvent
