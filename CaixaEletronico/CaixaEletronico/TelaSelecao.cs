@@ -54,5 +54,11 @@ namespace CaixaEletronico
                 MessageBox.Show("Erro");
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaDeposito td = new TelaDeposito();
+            td.Show();
+        }
     }
 }

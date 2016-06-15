@@ -16,3 +16,4 @@ C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletro
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaSelecao.resources
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaLog.resources
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaCadastroCliente.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaDeposito.resources

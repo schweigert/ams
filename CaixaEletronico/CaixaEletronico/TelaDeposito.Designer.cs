@@ -1,6 +1,6 @@
 ﻿namespace CaixaEletronico
 {
-    partial class Deposito
+    partial class TelaDeposito
     {
         /// <summary>
         /// Required designer variable.

@@ -90,6 +90,55 @@ class CriarCliente < MainEvent
 	end
 end
 
+class RemoverCorrente < MainEvent
+	def solve
+		@event = "fail"
+		@args[0].chomp!
+		@args[1] = @args[1].chomp!.to_f
+
+		query = $db.execute("SELECT scc FROM Cliente WHERE cc = '#{@args[0]}'")
+		if (query[0]['scc'] > @args[1])
+			$db.execute("UPDATE Cliente SET scc = scc - #{@args[1]} WHERE cc = '#{@args[0]}' ")
+			@event = "ok"
+		end
+	end
+end
+
+class RemoverPoup < MainEvent
+	def solve
+		@event = "fail"
+		@args[0].chomp!
+		@args[1] = @args[1].chomp!.to_f
+
+		query = $db.execute("SELECT scc FROM Cliente WHERE cc = '#{@args[0]}'")
+		if (query[0]['scc'] > @args[1])
+			$db.execute("UPDATE Cliente SET scc = scc - #{@args[1]} WHERE cc = '#{@args[0]}' ")
+			@event = "ok"
+		end
+	end
+end
+
+class AumentarPoup < MainEvent
+	def solve
+		@event = "fail"
+		@args[0].chomp!
+		@args[1] = @args[1].chomp!.to_f
+
+		$db.execute("UPDATE Cliente SET scp = scp + #{@args[1]} WHERE cp = '#{@args[0]}' ")
+		@event = "ok"
+	end
+end
+
+class AumentarCorrente < MainEvent
+	def solve
+		@event = "fail"
+		@args[0].chomp!
+		@args[1] = @args[1].chomp!.to_f
+
+		$db.execute("UPDATE Cliente SET scp = scp + #{@args[1]} WHERE cp = '#{@args[0]}' ")
+		@event = "ok"
+	end
+end
 
 class ConfirmJuros < MainEvent
 

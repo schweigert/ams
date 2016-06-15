@@ -50,11 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication.cs" />
-    <Compile Include="Deposito.cs">
+    <Compile Include="TelaDeposito.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deposito.Designer.cs">
-      <DependentUpon>Deposito.cs</DependentUpon>
+    <Compile Include="TelaDeposito.Designer.cs">
+      <DependentUpon>TelaDeposito.cs</DependentUpon>
     </Compile>
     <Compile Include="TelaCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
     <Compile Include="TelaSelecao.Designer.cs">
       <DependentUpon>TelaSelecao.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Deposito.resx">
-      <DependentUpon>Deposito.cs</DependentUpon>
+    <EmbeddedResource Include="TelaDeposito.resx">
+      <DependentUpon>TelaDeposito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TelaCadastroCliente.resx">
       <DependentUpon>TelaCadastroCliente.cs</DependentUpon>
