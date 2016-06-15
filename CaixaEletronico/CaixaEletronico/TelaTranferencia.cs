@@ -11,9 +11,9 @@ using Fleyhe.Network;
 
 namespace CaixaEletronico
 {
-    public partial class TelaDeposito : Form
+    public partial class TelaTranferencia : Form
     {
-        public TelaDeposito()
+        public TelaTranferencia()
         {
             InitializeComponent();
         }

@@ -57,8 +57,14 @@ namespace CaixaEletronico
 
         private void button2_Click(object sender, EventArgs e)
         {
-            TelaDeposito td = new TelaDeposito();
+            TelaTranferencia td = new TelaTranferencia();
             td.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TelaSaque ts = new TelaSaque();
+            ts.Show();
         }
     }
 }
