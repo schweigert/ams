@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'Fleyhe' 	#gem install Fleyhe
 
 class MainEvent < Fleyhe::Network::Event; end
@@ -53,8 +54,20 @@ class CriarCliente < MainEvent
 	# 1 - cc
 	# 2 - cp
 	# 3 - password
+=======
+# Para instalar a biblioteca do Servidor:
+#      Instalar SQLite3 na máquina
+#      gem install sqlite3
+#      gem install Fleyhe
 
+require 'Fleyhe'
+
+class MainEvent < Fleyhe::Network::Event; end
+>>>>>>> master
+
+class Log < MainEvent
 	def solve
+<<<<<<< HEAD
 
 		query = $db.execute "SELECT * FROM Cliente WHERE nome = '#{@args[0].chomp}'"
 		puts query
@@ -209,3 +222,11 @@ loop {
 	sleep 60
 
 }
+=======
+		
+	end
+end
+
+$db = Fleyhe::Data::Database.new "database.db"
+$listener = Fleyhe::Network::Database.new 3030, MainEvent
+>>>>>>> master
