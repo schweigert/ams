@@ -15,5 +15,10 @@ namespace CaixaEletronico
         {
             InitializeComponent();
         }
+
+        private void TelaAlterarFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
