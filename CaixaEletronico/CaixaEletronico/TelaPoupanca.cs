@@ -9,14 +9,11 @@ using System.Windows.Forms;
 
 namespace CaixaEletronico
 {
-    public partial class TelaAlterarConta : Form
+    public partial class TelaPoupanca : Form
     {
-        public TelaAlterarConta()
+        public TelaPoupanca()
         {
             InitializeComponent();
         }
-
-        private void TelaAlterarConta_Load(object sender, EventArgs e)
-        {}
     }
 }

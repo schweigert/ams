@@ -97,5 +97,11 @@ namespace CaixaEletronico
             TelaAlterarFuncionario taf = new TelaAlterarFuncionario();
             taf.Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            TelaPoupanca tp = new TelaPoupanca();
+            tp.Show();
+        }
     }
 }
