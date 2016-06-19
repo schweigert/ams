@@ -50,6 +50,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication.cs" />
+    <Compile Include="TelaAlterarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAlterarConta.Designer.cs">
+      <DependentUpon>TelaAlterarConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaAlterarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAlterarFuncionario.Designer.cs">
+      <DependentUpon>TelaAlterarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaBoleto.Designer.cs">
+      <DependentUpon>TelaBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDeposito.Designer.cs">
+      <DependentUpon>TelaDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaExtrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaExtrato.Designer.cs">
+      <DependentUpon>TelaExtrato.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
