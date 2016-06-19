@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication.cs" />
+    <Compile Include="TelaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPagamento.Designer.cs">
+      <DependentUpon>TelaPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaTranferencia.cs">
       <SubType>Form</SubType>
     </Compile>

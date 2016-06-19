@@ -71,6 +71,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Extrato";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -90,6 +91,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Pagamento";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -108,6 +110,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Confirm. Boleto";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
