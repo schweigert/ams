@@ -18,5 +18,11 @@ namespace CaixaEletronico
 
         private void TelaAlterarConta_Load(object sender, EventArgs e)
         {}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TelaExibirClientes tec = new TelaExibirClientes();
+            tec.Show();
+        }
     }
 }
