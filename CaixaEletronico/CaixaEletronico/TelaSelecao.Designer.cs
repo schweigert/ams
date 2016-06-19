@@ -140,6 +140,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "Alt. Cliente";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -149,6 +150,7 @@
             this.button11.TabIndex = 10;
             this.button11.Text = "Alt. Funcionario";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 

@@ -85,5 +85,17 @@ namespace CaixaEletronico
             TelaBoleto tb = new TelaBoleto();
             tb.Show();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            TelaAlterarConta tac = new TelaAlterarConta();
+            tac.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            TelaAlterarFuncionario taf = new TelaAlterarFuncionario();
+            taf.Show();
+        }
     }
 }
