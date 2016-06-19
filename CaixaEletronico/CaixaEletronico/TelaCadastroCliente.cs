@@ -45,6 +45,9 @@ namespace CaixaEletronico
             {
                 MessageBox.Show("Usuário criado com sucesso");
                 this.Dispose();
+            } else
+            {
+                MessageBox.Show("Erro na criação do usuário");
             }
         }
     }
