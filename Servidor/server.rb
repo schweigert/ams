@@ -140,16 +140,36 @@ class AumentarCorrente < MainEvent
 	end
 end
 
-class ConfirmJuros < MainEvent
+class UpdateFuncionario < MainEvent
+	# Args:
+	# 0 - Nome
+	# 1 - Senha
+	# 2 - Admin
+	# 3 - NomeADM
+	# 4 - SenhaADM
 
 	def solve
-		puts "Ok"
+		@args[0].chomp!
+		@args[1].chomp!
+		@args[2].chomp!
+		@args[3].chomp!
+		@args[4].chomp!
+
+		func = Funcionario.new @args[3], @args[4]
+		
+		if func.admin?
+			return
+		end
+		
+	end
+end
+
+class ConfirmJuros < MainEvent
+	def solve
 		query = $db.execute "UPDATE Cliente SET scp = scp + scp*juros"
 		EDA::Log.createLog("Juros atualizado")
-		puts "Ok"
 		@event = "ok"
 		@form[0] = "atualizado"
-		puts "Ok"
 	end
 
 end
@@ -163,6 +183,15 @@ module EDA
 
 			@nome = login
 			@senha = password
+
+		end
+
+		def admin?
+			query = $db.execute "SELECT admin FROM Funcionario WHERE nome = '#{@nome}'"
+			if query[0].to_i == 1
+				return true;
+			end
+			return false;
 
 		end
 
