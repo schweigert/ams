@@ -18,3 +18,11 @@ C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletro
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaCadastroCliente.resources
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaSaque.resources
 C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaTranferencia.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaAlterarConta.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaAlterarFuncionario.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaBoleto.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaDeposito.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaExibirClientes.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaExtrato.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaPagamento.resources
+C:\Users\Marlon Henry\Documents\GitHub\UDESC\BCC\AMS\CaixaEletronico\CaixaEletronico\obj\x86\Debug\CaixaEletronico.TelaPoupanca.resources

@@ -164,6 +164,43 @@ class UpdateFuncionario < MainEvent
 	end
 end
 
+class Saque < MainEvent
+	# 0 = conta
+	# 1 = valor
+	# 2 = poupança = t
+	# 3 = senha
+	def solve
+		if @args[2].chomp == "t"
+			t = true
+		else
+			t = false
+		end
+		cliente = EDA::Cliente.new @args[0].chomp, @args[3].chomp
+		if cliente.autenticado?
+			# ver saldo
+			if t
+				coluna = "scp"
+				colunac = "cp"
+			else
+				coluna = "scc"
+				colunac = "cc"
+			end
+
+			query = "SELECT #{coluna} FROM Cliente WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
+
+			unless query[0][coluna].to_f > @args[1].to_f
+				@event = "fail"
+			end
+
+			$db.execute "UPDATE Cliente SET #{coluna} = #{coluna} - #{@args[1].to_f} WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
+
+			@event = "ok"
+		end
+
+		@event = "fail"	
+	end
+end
+
 class ConfirmJuros < MainEvent
 	def solve
 		query = $db.execute "UPDATE Cliente SET scp = scp + scp*juros"
@@ -223,6 +260,34 @@ module EDA
 
 		def self.createLog desc
 			$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{desc}')"
+		end
+	end
+
+	class Cliente
+		def initialize conta, senha, p = true
+			if p
+				@cPoup = conta
+				@conta = conta
+			else
+				@cCorr = conta
+				@conta = conta
+			end
+			@p = p
+			@senha = senha
+		end
+
+		def autenticado?
+			#verificar login e senha
+			if @p
+				query = $db.execute "SELECT senha FROM Cliente WHERE cp = '#{@cPoup.to_s.chomp}'"
+			else
+				query = $db.execute "SELECT senha FROM Cliente WHERE cc = '#{@cCorr.to_s.chomp}'"
+			end
+
+			if query[0]['senha'].to_s.chomp == @senha.to_s.chomp
+				return true
+			end
+			return false
 		end
 	end
 
