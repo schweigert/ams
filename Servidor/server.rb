@@ -164,12 +164,21 @@ class UpdateFuncionario < MainEvent
 	end
 end
 
+class Extrato < MainEvent
+	def solve
+
+	end
+end
+
 class Saque < MainEvent
 	# 0 = conta
 	# 1 = valor
 	# 2 = poupança = t
 	# 3 = senha
 	def solve
+	puts @args
+		@event = "fail"	
+		@form[1] = "ok"
 		if @args[2].chomp == "t"
 			t = true
 		else
@@ -186,18 +195,19 @@ class Saque < MainEvent
 				colunac = "cc"
 			end
 
-			query = "SELECT #{coluna} FROM Cliente WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
-
-			unless query[0][coluna].to_f > @args[1].to_f
+			query = $db.execute "SELECT #{coluna} FROM Cliente WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
+			puts query[0][0].to_f
+			puts query[0][0]
+			unless query[0][0].to_f < @args[1].to_f
 				@event = "fail"
 			end
 
-			$db.execute "UPDATE Cliente SET #{coluna} = #{coluna} - #{@args[1].to_f} WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
+			puts $db.execute "UPDATE Cliente SET #{coluna} = #{coluna} - #{@args[1].to_f} WHERE #{colunac} = '#{@args[0].to_s.chomp}'"
 
 			@event = "ok"
 		end
 
-		@event = "fail"	
+		
 	end
 end
 
@@ -258,8 +268,12 @@ module EDA
 
 		end
 
-		def self.createLog desc
-			$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{desc}')"
+		def self.createLog desc, conta=nil
+			if conta == nil
+				$db.execute "INSERT INTO log (data,descricao) VALUES ('#{Time.now.gmtime}', '#{desc}')"
+			else
+				$db.execute "INSERT INTO log (data,descricao,conta) VALUES ('#{Time.now.gmtime}', '#{desc}', '#{conta}')"
+			end
 		end
 	end
 

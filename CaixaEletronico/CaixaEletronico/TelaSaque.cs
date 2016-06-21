@@ -40,6 +40,8 @@ namespace CaixaEletronico
 
             Request req = new Request("Saque", args);
 
+            Console.WriteLine(req.Event);
+
             if (req.Event.Normalize() == "ok")
             {
                 MessageBox.Show("Saque efetuado com sucesso.");
