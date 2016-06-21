@@ -166,7 +166,7 @@ end
 
 class Extrato < MainEvent
 	def solve
-
+		cc @args[0].to_i
 	end
 end
 
